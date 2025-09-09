@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cybersecurity Assistant</h1>
+            <p>Phishing Detection & Cybersecurity Q&A</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="phishing">Phishing Detector</button>
+            <button class="tab-button" data-tab="chatbot">Cybersecurity Chatbot</button>
+        </div>
+
+        <div class="tab-content">
+            <!-- Phishing Detector Tab -->
+            <div id="phishing" class="tab-pane active">
+                <h2>Email Phishing Detector</h2>
+                <p>Paste the content of an email to check if it's a phishing attempt</p>
+                
+                <textarea id="email-text" placeholder="Paste email content here..."></textarea>
+                
+                <button id="check-phishing">Check for Phishing</button>
+                
+                <div id="result" class="hidden">
+                    <h3>Analysis Result:</h3>
+                    <p id="result-text"></p>
+                    <p id="confidence"></p>
+                </div>
+            </div>
+
+            <!-- Chatbot Tab -->
+            <div id="chatbot" class="tab-pane">
+                <h2>Cybersecurity Chatbot</h2>
+                <p>Ask me anything about cybersecurity</p>
+                
+                <div id="chat-container">
+                    <div id="chat-messages"></div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="user-input" placeholder="Type your question here...">
+                        <button id="send-button">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
