@@ -9,8 +9,15 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
-# Download NLTK data
-nltk.download('stopwords')
+# Download NLTK data if not already available
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    print("Downloading NLTK stopwords...")
+    nltk.download('stopwords')
+
+
+
 
 def preprocess_text(text):
     # Convert to lowercase
@@ -29,7 +36,7 @@ def preprocess_text(text):
 
 def train_model():
     # Load the dataset
-    df = pd.read_csv('data/spam_ham_dataset.csv')
+    df = pd.read_csv('backend/data/spam_ham_dataset.csv')
     
     # Preprocess the text
     df['processed_text'] = df['text'].apply(preprocess_text)
