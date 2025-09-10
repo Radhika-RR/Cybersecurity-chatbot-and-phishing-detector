@@ -2,65 +2,64 @@
   "questions": [
     {
       "patterns": [
-        "what is phishing",
-        "define phishing",
-        "explain phishing"
+        ".*what.*phishing.*",
+        ".*define.*phishing.*",
+        ".*explain.*phishing.*"
       ],
       "response": "Phishing is a cyber attack that uses disguised email as a weapon. The goal is to trick the email recipient into believing that the message is something they want or need and to click a link or download an attachment."
     },
     {
       "patterns": [
-        "how to prevent phishing",
-        "phishing prevention",
-        "avoid phishing attacks"
+        ".*how.*prevent.*phishing.*",
+        ".*phishing.*prevention.*",
+        ".*avoid.*phishing.*"
       ],
       "response": "To prevent phishing: 1) Be cautious of unsolicited emails, 2) Check email addresses and URLs carefully, 3) Don't click on suspicious links, 4) Use multi-factor authentication, 5) Keep software updated, 6) Use anti-phishing tools."
     },
     {
       "patterns": [
-        "what is malware",
-        "define malware",
-        "types of malware"
+        ".*what.*malware.*",
+        ".*define.*malware.*",
+        ".*types.*malware.*"
       ],
       "response": "Malware is malicious software designed to harm, exploit, or compromise computer systems. Common types include viruses, worms, trojans, ransomware, spyware, and adware."
     },
     {
       "patterns": [
-        "how to create strong password",
-        "strong password tips",
-        "password security"
+        ".*strong.*password.*",
+        ".*password.*tips.*",
+        ".*password.*security.*"
       ],
       "response": "Create strong passwords by: 1) Using at least 12 characters, 2) Mixing letters, numbers, and symbols, 3) Avoiding common words or phrases, 4) Not using personal information, 5) Using different passwords for different accounts, 6) Considering a password manager."
     },
     {
       "patterns": [
-        "what is two factor authentication",
-        "what is 2fa",
-        "multi factor authentication"
+        ".*two.*factor.*authentication.*",
+        ".*2fa.*",
+        ".*multi.*factor.*authentication.*"
       ],
       "response": "Two-factor authentication (2FA) adds an extra layer of security beyond just a password. It requires two different types of credentials: something you know (password) and something you have (like a code sent to your phone) or something you are (biometrics)."
     },
     {
       "patterns": [
-        "how to detect phishing email",
-        "signs of phishing email",
-        "identify phishing email"
+        ".*detect.*phishing.*email.*",
+        ".*signs.*phishing.*email.*",
+        ".*identify.*phishing.*email.*"
       ],
       "response": "Signs of a phishing email: 1) Generic greetings, 2) Spelling and grammar mistakes, 3) Urgent or threatening language, 4) Suspicious sender address, 5) Requests for personal information, 6) Mismatched URLs, 7) Unexpected attachments."
     },
     {
       "patterns": [
-        "what should i do if i clicked phishing link",
-        "clicked phishing link",
-        "phishing link clicked"
+        ".*clicked.*phishing.*link.*",
+        ".*phishing.*link.*clicked.*"
       ],
       "response": "If you clicked a phishing link: 1) Disconnect from the internet, 2) Run a full antivirus scan, 3) Change your passwords, 4) Monitor accounts for suspicious activity, 5) Contact your IT department if at work, 6) Consider credit monitoring if financial info was entered."
     },
     {
       "patterns": [
-        "what is ransomware",
-        "define ransomware",
-        "how ransomware works"
+        ".*what.*ransomware.*",
+        ".*define.*ransomware.*",
+        ".*how.*ransomware.*works.*"
       ],
       "response": "Ransomware is malicious software that blocks access to a computer system or data until a ransom is paid. It typically encrypts files and demands payment (often in cryptocurrency) for the decryption key."
     }

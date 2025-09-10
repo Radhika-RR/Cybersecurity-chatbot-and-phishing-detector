@@ -7,6 +7,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import json
 import re
 from typing import List, Dict
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+import os
 
 app = FastAPI(title="Cybersecurity API")
 
@@ -19,20 +22,38 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Get the current directory
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
+frontend_dir = os.path.join(project_root, 'frontend')
+
+# Serve static files (CSS, JS)
+app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
+
+# Serve the main page
+@app.get("/")
+async def read_index():
+    return FileResponse(os.path.join(frontend_dir, 'index.html'))
+
 # Load phishing detection model
+model = None
+vectorizer = None
 try:
-    with open('models/phishing_model.pkl', 'rb') as f:
+    model_path = os.path.join(current_dir, 'models/phishing_model.pkl')
+    with open(model_path, 'rb') as f:
         model_data = pickle.load(f)
         model = model_data['model']
         vectorizer = model_data['vectorizer']
+    print("Model loaded successfully")
 except FileNotFoundError:
-    model = None
-    vectorizer = None
-    print("Model not found. Please train the model first.")
+    print("Model file not found. Please train the model first.")
+except Exception as e:
+    print(f"Error loading model: {str(e)}")
 
 # Load chatbot QnAs
 try:
-    with open('chatbot/qna.json', 'r') as f:
+    qna_path = os.path.join(current_dir, 'chatbot/qna.json')
+    with open(qna_path, 'r') as f:
         qna_data = json.load(f)
 except FileNotFoundError:
     qna_data = {"questions": []}
@@ -82,10 +103,11 @@ async def chat(request: ChatRequest):
     )
 
 # Health check endpoint
-@app.get("/")
-async def root():
-    return {"message": "Cybersecurity API is running"}
-
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
+
+# API info endpoint
+@app.get("/api")
+async def api_info():
+    return {"message": "Cybersecurity API is running"}

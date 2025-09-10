@@ -8,6 +8,7 @@ import re
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
+import os
 
 # Download NLTK data if not already available
 try:
@@ -15,9 +16,6 @@ try:
 except LookupError:
     print("Downloading NLTK stopwords...")
     nltk.download('stopwords')
-
-
-
 
 def preprocess_text(text):
     # Convert to lowercase
@@ -35,8 +33,12 @@ def preprocess_text(text):
     return ' '.join(words)
 
 def train_model():
+    # Get current directory
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(current_dir, 'data', 'spam_ham_dataset.csv')
+    
     # Load the dataset
-    df = pd.read_csv('backend/data/spam_ham_dataset.csv')
+    df = pd.read_csv(data_path)
     
     # Preprocess the text
     df['processed_text'] = df['text'].apply(preprocess_text)
@@ -65,7 +67,12 @@ def train_model():
         'vectorizer': vectorizer
     }
     
-    with open('models/phishing_model.pkl', 'wb') as f:
+    # Create models directory if it doesn't exist
+    models_dir = os.path.join(current_dir, 'models')
+    os.makedirs(models_dir, exist_ok=True)
+    
+    model_path = os.path.join(models_dir, 'phishing_model.pkl')
+    with open(model_path, 'wb') as f:
         pickle.dump(model_data, f)
     
     print("Model trained and saved successfully")
