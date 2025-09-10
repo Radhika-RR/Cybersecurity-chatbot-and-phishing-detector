@@ -6,62 +6,224 @@
         ".*define.*phishing.*",
         ".*explain.*phishing.*"
       ],
-      "response": "Phishing is a cyber attack that uses disguised email as a weapon. The goal is to trick the email recipient into believing that the message is something they want or need and to click a link or download an attachment."
+      "response": "Phishing is a cyber attack that uses disguised email as a weapon. The goal is to trick the email recipient into believing that the message is something they want or need — a request from their bank, for instance, or a note from someone in their company — and to click a link or download an attachment. What really distinguishes phishing is the form the message takes: the attackers masquerade as a trusted entity of some kind, often a real or plausibly real person, or a company the victim might do business with."
     },
     {
       "patterns": [
-        ".*how.*prevent.*phishing.*",
-        ".*phishing.*prevention.*",
-        ".*avoid.*phishing.*"
+        ".*how.*prevent.*malware.*",
+        ".*protect.*against.*malware.*",
+        ".*anti.*malware.*tips.*"
       ],
-      "response": "To prevent phishing: 1) Be cautious of unsolicited emails, 2) Check email addresses and URLs carefully, 3) Don't click on suspicious links, 4) Use multi-factor authentication, 5) Keep software updated, 6) Use anti-phishing tools."
-    },
-    {
-      "patterns": [
-        ".*what.*malware.*",
-        ".*define.*malware.*",
-        ".*types.*malware.*"
-      ],
-      "response": "Malware is malicious software designed to harm, exploit, or compromise computer systems. Common types include viruses, worms, trojans, ransomware, spyware, and adware."
-    },
-    {
-      "patterns": [
-        ".*strong.*password.*",
-        ".*password.*tips.*",
-        ".*password.*security.*"
-      ],
-      "response": "Create strong passwords by: 1) Using at least 12 characters, 2) Mixing letters, numbers, and symbols, 3) Avoiding common words or phrases, 4) Not using personal information, 5) Using different passwords for different accounts, 6) Considering a password manager."
-    },
-    {
-      "patterns": [
-        ".*two.*factor.*authentication.*",
-        ".*2fa.*",
-        ".*multi.*factor.*authentication.*"
-      ],
-      "response": "Two-factor authentication (2FA) adds an extra layer of security beyond just a password. It requires two different types of credentials: something you know (password) and something you have (like a code sent to your phone) or something you are (biometrics)."
-    },
-    {
-      "patterns": [
-        ".*detect.*phishing.*email.*",
-        ".*signs.*phishing.*email.*",
-        ".*identify.*phishing.*email.*"
-      ],
-      "response": "Signs of a phishing email: 1) Generic greetings, 2) Spelling and grammar mistakes, 3) Urgent or threatening language, 4) Suspicious sender address, 5) Requests for personal information, 6) Mismatched URLs, 7) Unexpected attachments."
-    },
-    {
-      "patterns": [
-        ".*clicked.*phishing.*link.*",
-        ".*phishing.*link.*clicked.*"
-      ],
-      "response": "If you clicked a phishing link: 1) Disconnect from the internet, 2) Run a full antivirus scan, 3) Change your passwords, 4) Monitor accounts for suspicious activity, 5) Contact your IT department if at work, 6) Consider credit monitoring if financial info was entered."
+      "response": "Preventing malware requires a multi-layered approach: 1) Use reputable anti-virus and anti-malware software and keep it updated. 2) Keep your operating system and all software patched to fix security vulnerabilities. 3) Be extremely cautious with email attachments and links, even from known senders. 4) Only download software from official, trusted sources. 5) Use a firewall to monitor incoming and outgoing network traffic. 6) Regularly back up your data to an external drive or cloud service so you can recover if infected. 7) Practice the principle of least privilege; don't use an administrator account for daily tasks."
     },
     {
       "patterns": [
         ".*what.*ransomware.*",
-        ".*define.*ransomware.*",
-        ".*how.*ransomware.*works.*"
+        ".*how.*ransomware.*work.*",
+        ".*define.*ransomware.*"
       ],
-      "response": "Ransomware is malicious software that blocks access to a computer system or data until a ransom is paid. It typically encrypts files and demands payment (often in cryptocurrency) for the decryption key."
+      "response": "Ransomware is a type of malicious software (malware) that threatens to publish the victim's data or perpetually block access to it unless a ransom is paid. It works by encrypting the files on the victim's system with a strong cryptographic key that only the attacker possesses. The attacker then demands payment, usually in a cryptocurrency like Bitcoin, in exchange for the decryption key. Paying the ransom is discouraged by authorities as it does not guarantee file recovery and funds criminal activity. The best defense is robust, offline backups and proactive security measures."
+    },
+    {
+      "patterns": [
+        ".*what.*two-factor authentication.*",
+        ".*what.*2fa.*",
+        ".*why.*use.*two factor.*",
+        ".*how.*2fa.*work.*"
+      ],
+      "response": "Two-factor authentication (2FA) is a security process in which users provide two different authentication factors to verify themselves. This adds a critical second layer of security to your accounts. The factors are typically: 1) Something you know (like a password or PIN), and 2) Something you have (like a smartphone with an authenticator app, a physical security key, or a code sent via SMS). Even if an attacker steals your password, they cannot access your account without also possessing your second factor. It is one of the most effective ways to prevent unauthorized account access."
+    },
+    {
+      "patterns": [
+        ".*what.*vpn.*",
+        ".*how.*vpn.*work.*",
+        ".*benefits.*of.*vpn.*"
+      ],
+      "response": "A Virtual Private Network (VPN) creates an encrypted tunnel between your device and a remote server operated by the VPN service. All your internet traffic is routed through this tunnel, which has two main benefits: 1) Security: Your data is encrypted, protecting it from eavesdroppers on public Wi-Fi networks. 2) Privacy: Your IP address is masked, making it appear as if your traffic is coming from the VPN server, which helps anonymize your online activity and can allow you to access geo-restricted content. It's important to choose a reputable VPN provider with a no-logs policy."
+    },
+    {
+      "patterns": [
+        ".*what.*firewall.*",
+        ".*how.*firewall.*protect.*",
+        ".*define.*firewall.*"
+      ],
+      "response": "A firewall is a network security device that monitors and filters incoming and outgoing network traffic based on an organization's previously established security policies. It acts as a barrier between a trusted internal network and untrusted external networks, such as the Internet. A firewall can be hardware-based, software-based, or a combination of both. It decides whether to allow or block specific traffic based on a defined set of rules, helping to prevent unauthorized access, block malicious software, and stop cyberattacks before they reach your internal systems."
+    },
+    {
+      "patterns": [
+        ".*what.*data breach.*",
+        ".*define.*data breach.*",
+        ".*example.*data breach.*"
+      ],
+      "response": "A data breach is a security incident in which sensitive, protected, or confidential data is copied, transmitted, viewed, stolen, or used by an individual unauthorized to do so. This can include personal information like Social Security numbers, credit card numbers, health records, or corporate intellectual property. Data breaches can be caused by cyber attacks (e.g., hacking, malware), system vulnerabilities, or human error (e.g., an employee falling for a phishing scam or misconfiguring a cloud server). The consequences often include financial loss, reputational damage, and legal penalties."
+    },
+    {
+      "patterns": [
+        ".*what.*social engineering.*",
+        ".*define.*social engineering.*",
+        ".*how.*social engineering.*attack.*work.*"
+      ],
+      "response": "Social engineering is the psychological manipulation of people into performing actions or divulging confidential information. It's essentially a 'con game' that tricks users into breaking standard security procedures. Unlike technical hacking, it exploits human psychology and trust. Attackers use tactics like pretexting (creating a fabricated scenario), phishing, baiting (offering something enticing), and tailgating (physically following someone into a restricted area). The best defense is ongoing security awareness training to help people recognize and resist these manipulative tactics."
+    },
+    {
+      "patterns": [
+        ".*what.*ddos.*attack.*",
+        ".*define.*distributed denial of service.*",
+        ".*how.*ddos.*work.*"
+      ],
+      "response": "A Distributed Denial-of-Service (DDoS) attack is a malicious attempt to disrupt the normal traffic of a targeted server, service, or network by overwhelming it with a flood of Internet traffic. It uses multiple compromised computer systems as sources of attack traffic. These can include computers and other networked resources such as IoT devices. The sheer volume of incoming messages, connection requests, or malformed packets forces the target to slow down or even crash, making it inaccessible to legitimate users. Mitigation often involves filtering traffic through specialized scrubbing centers."
+    },
+    {
+      "patterns": [
+        ".*what.*encryption.*",
+        ".*how.*encryption.*work.*",
+        ".*why.*encryption.*important.*"
+      ],
+      "response": "Encryption is the process of converting data or information into a code, called ciphertext, to prevent unauthorized access. It uses algorithms and a key to transform readable data (plaintext) into an unreadable format. Only someone with the correct decryption key can revert it back to plaintext. It's fundamental for protecting data confidentiality, both 'at rest' (e.g., stored on a hard drive) and 'in transit' (e.g., being sent over the internet). It's what keeps your online banking, credit card transactions, and private messages secure from eavesdroppers."
+    },
+    {
+      "patterns": [
+        ".*what.*zero day.*exploit.*",
+        ".*define.*zero day.*",
+        ".*how.*zero day.*work.*"
+      ],
+      "response": "A zero-day exploit is a cyber attack that targets a previously unknown software vulnerability. The term 'zero-day' refers to the fact that the software vendor has had zero days to patch the flaw. Attackers discover this vulnerability before the vendor does and write code to exploit it. This gives defenders no time to prepare a defense, making these attacks highly dangerous. Once the vendor becomes aware of the vulnerability, they race to develop and release a patch, at which point it is no longer considered a 'zero-day.'"
+    },
+    {
+      "patterns": [
+        ".*what.*malware.*",
+        ".*types.*of.*malware.*",
+        ".*define.*malware.*"
+      ],
+      "response": "Malware, short for 'malicious software,' is any software intentionally designed to cause damage to a computer, server, client, or computer network. There are many types of malware: Viruses attach to clean files and infect other files. Worms replicate themselves to spread to other computers. Trojans disguise themselves as legitimate software. Ransomware locks access to data until a ransom is paid. Spyware secretly records your activities. Adware serves unwanted advertisements. Keyloggers record your keystrokes. The common goal is to compromise devices for the attacker's benefit."
+    },
+    {
+      "patterns": [
+        ".*what.*patch.*",
+        ".*why.*software updates.*important.*",
+        ".*what.*patching.*"
+      ],
+      "response": "A patch, also known as a software update or fix, is a set of changes to a computer program or its supporting data designed to update, fix, or improve it. This includes fixing security vulnerabilities that have been discovered. Software updates are critically important for cybersecurity because they close the security holes that attackers exploit. When a vendor releases a patch for a vulnerability, attackers are aware of it too and will quickly try to attack systems that haven't been updated. Failing to apply patches promptly is one of the most common causes of successful cyber attacks."
+    },
+    {
+      "patterns": [
+        ".*what.*password manager.*",
+        ".*why.*use.*password manager.*",
+        ".*are.*password managers.*safe.*"
+      ],
+      "response": "A password manager is a software application that helps a user store and organize their passwords in an encrypted database. Users only need to remember a single 'master password' to access their entire vault of unique, complex passwords for every site and service. This allows you to use strong, different passwords for every account without having to memorize them all. Reputable password managers are very safe; they use strong encryption to protect your data, and your master password is never stored on their servers. They are significantly more secure than the common alternatives of reusing passwords or using weak ones."
+    },
+    {
+      "patterns": [
+        ".*what.*https.*",
+        ".*why.*https.*important.*",
+        ".*what.*ssl.*tls.*"
+      ],
+      "response": "HTTPS (Hypertext Transfer Protocol Secure) is the secure version of HTTP. It is the primary protocol used to send data between a web browser and a website. The 'S' stands for 'Secure' and indicates that all communications between your browser and the website are encrypted. This encryption is facilitated by SSL/TLS protocols, which create a secure channel over an insecure network. HTTPS protects the integrity and confidentiality of the data in transit, preventing eavesdropping, man-in-the-middle attacks, and tampering. Always look for the padlock icon in your browser's address bar."
+    },
+    {
+      "patterns": [
+        ".*what.*man in the middle.*attack.*",
+        ".*define.*mitm.*",
+        ".*how.*mitm.*work.*"
+      ],
+      "response": "A man-in-the-middle (MitM) attack is a form of eavesdropping where the attacker secretly relays and possibly alters the communications between two parties who believe they are directly communicating with each other. For example, an attacker could set up a rogue Wi-Fi hotspot in a public place. When users connect to it, the attacker can intercept all the data passing between the user's device and the internet, potentially capturing login credentials and other sensitive information. Using HTTPS and a reputable VPN, especially on public Wi-Fi, are key defenses against MitM attacks."
+    },
+    {
+      "patterns": [
+        ".*what.*multi factor authentication.*",
+        ".*mfa.*vs.*2fa.*",
+        ".*define.*mfa.*"
+      ],
+      "response": "Multi-factor authentication (MFA) is a security system that requires more than one method of authentication from independent categories of credentials to verify the user's identity for a login or other transaction. While 2FA is a subset of MFA that uses exactly two factors, MFA can use two or more. The factors are categorized as: 1) Knowledge (something you know, e.g., password), 2) Possession (something you have, e.g., phone, security key), and 3) Inherence (something you are, e.g., fingerprint, facial recognition). MFA provides a significantly higher level of assurance than passwords alone."
+    },
+    {
+      "patterns": [
+        ".*what.*botnet.*",
+        ".*how.*botnet.*work.*",
+        ".*define.*botnet.*"
+      ],
+      "response": "A botnet is a network of private computers infected with malicious software and controlled as a group without the owners' knowledge. Each individual machine in the botnet is called a 'zombie' or 'bot.' The attacker, known as a 'bot-herder,' controls them from a central command-and-control (C&C) server. Botnets are used to carry out large-scale tasks like Distributed Denial-of-Service (DDoS) attacks, sending spam emails, click fraud, and mining cryptocurrency. They are a significant threat because they leverage the combined power of thousands of compromised devices."
+    },
+    {
+      "patterns": [
+        ".*what.*penetration testing.*",
+        ".*what.*pentest.*",
+        ".*why.*pen test.*important.*"
+      ],
+      "response": "Penetration testing, or pen testing, is the practice of testing a computer system, network, or web application to find security vulnerabilities that an attacker could exploit. It is an authorized, simulated cyber attack conducted by ethical security professionals (pen testers). The goal is not just to find weaknesses but to exploit them to understand the real-world impact and prioritize remediation. Pen testing is crucial for proactively identifying and fixing security flaws before malicious attackers can find and use them, helping organizations strengthen their overall security posture."
+    },
+    {
+      "patterns": [
+        ".*what.*security policy.*",
+        ".*why.*need.*security policy.*",
+        ".*define.*information security policy.*"
+      ],
+      "response": "An information security policy is a set of rules and guidelines formulated by an organization to manage and protect its information assets from unauthorized access, modification, and destruction. It is a foundational element of an organization's security program. It defines the 'what' and 'why' of security for employees, management, and third parties. A strong policy covers areas like acceptable use of systems, access control, password requirements, data classification, incident response, and remote work rules. It provides a framework for consistent and effective security practices across the entire organization."
+    },
+    {
+      "patterns": [
+        ".*what.*incident response.*",
+        ".*define.*incident response.*plan.*",
+        ".*steps.*incident response.*"
+      ],
+      "response": "Incident response is a structured approach an organization uses to handle and manage a cyberattack or security breach. The goal is to minimize damage, reduce recovery time and costs, and mitigate exploited vulnerabilities. A formal plan typically follows a lifecycle with six phases: 1) Preparation (training and tooling), 2) Identification (detecting and determining the scope of the incident), 3) Containment (short-term and long-term steps to limit damage), 4) Eradication (removing the threat from the environment), 5) Recovery (restoring systems and returning to business operations), and 6) Lessons Learned (documenting the incident and improving future response)."
+    },
+    {
+      "patterns": [
+        ".*what.*cloud security.*",
+        ".*security risks.*of.*cloud.*",
+        ".*how.*secure.*cloud.*"
+      ],
+      "response": "Cloud security is a collection of security measures designed to protect cloud-based infrastructure, applications, and data. It is a shared responsibility model between the cloud provider and the customer. The provider secures the underlying infrastructure (hardware, software, networking, and facilities). The customer is responsible for securing their data, configuring access controls, and managing their operating systems and applications. Key security considerations include data breaches, misconfigurations, insecure APIs, and unauthorized access. Best practices include strong access management, encryption of data at rest and in transit, and regular audits of configurations and access logs."
+    },
+    {
+      "patterns": [
+        ".*what.*sql injection.*",
+        ".*how.*sql injection.*work.*",
+        ".*define.*sql injection.*"
+      ],
+      "response": "SQL injection is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database. It allows an attacker to view data that they are not normally able to retrieve, including data belonging to other users, or any other data that the application itself can access. In many cases, an attacker can modify or delete this data, causing persistent changes to the application's content or behavior. It works by 'injecting' malicious SQL code through user input fields (like a login form) that is not properly sanitized by the application. Defenses include using parameterized queries and input validation."
+    },
+    {
+      "patterns": [
+        ".*what.*iot security.*",
+        ".*risks.*of.*iot devices.*",
+        ".*how.*secure.*smart home.*"
+      ],
+      "response": "IoT security is the practice of securing Internet of Things devices—the vast network of connected physical devices like smart home gadgets, medical devices, and industrial sensors. IoT devices are notoriously insecure due to factors like weak default passwords, lack of a secure update mechanism, outdated software, and minimal built-in security features. This makes them easy targets for botnets and a point of entry into home or corporate networks. Securing them involves: changing default passwords, keeping firmware updated, segmenting them on a separate network from your main devices, and disabling unnecessary features."
+    },
+    {
+      "patterns": [
+        ".*what.*access control.*",
+        ".*principle.*least privilege.*",
+        ".*define.*access control.*"
+      ],
+      "response": "Access control is a security technique that regulates who or what can view or use resources in a computing environment. It is a fundamental concept in security that minimizes risk to the organization. The two main components are authentication (verifying the identity of a user or device) and authorization (determining what resources that user/device can access). The Principle of Least Privilege (PoLP) is a core tenet of access control; it states that users and programs should only be granted the minimum levels of access—or permissions—necessary to perform their tasks. This limits the damage from accidents or malicious acts."
+    },
+    {
+      "patterns": [
+        ".*what.*endpoint security.*",
+        ".*endpoint protection.*",
+        ".*define.*endpoint.*"
+      ],
+      "response": "An endpoint is any remote computing device that connects to a network, such as a laptop, smartphone, tablet, or server. Endpoint security is the practice of securing these endpoints from cyber threats. Traditional antivirus is a component, but modern Endpoint Protection Platforms (EPP) and Endpoint Detection and Response (EDR) solutions offer a more comprehensive suite of tools. These include anti-malware, firewalls, intrusion prevention, data loss prevention, and behavioral analysis to detect and block suspicious activity. It's crucial for protecting devices that access corporate networks, especially with the rise of remote work."
+    },
+    {
+      "patterns": [
+        ".*what.*security awareness training.*",
+        ".*why.*train.*employees.*security.*",
+        ".*importance.*security training.*"
+      ],
+      "response": "Security awareness training is an educational process for teaching employees about cybersecurity, the various threats they may face, and the organization's policies and procedures for keeping data and systems secure. It is critical because humans are often the weakest link in the security chain; a single employee clicking a phishing link can lead to a massive breach. Effective training goes beyond a yearly seminar and includes regular, engaging content like simulated phishing exercises, short videos, and updates on new threats. It empowers employees to become an active, vigilant layer of defense for their organization."
+    },
+    {
+      "patterns": [
+        ".*what.*zero trust.*",
+        ".*define.*zero trust.*architecture.*",
+        ".*how.*zero trust.*work.*"
+      ],
+      "response": "Zero Trust is a strategic cybersecurity framework that requires all users, whether inside or outside the organization's network, to be authenticated, authorized, and continuously validated before being granted or keeping access to applications and data. The core principle is 'never trust, always verify.' It assumes no traditional network edge; networks can be local, in the cloud, or a hybrid. Access is granted on a per-session basis, and decisions are based on user identity, device health, and other contextual factors. This model is designed to prevent lateral movement of attackers inside a network by segmenting access and minimizing trust."
     }
   ]
 }
