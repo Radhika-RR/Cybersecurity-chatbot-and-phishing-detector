@@ -9,6 +9,10 @@ import json
 import re
 import os
 from typing import Dict
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
 # Initialize FastAPI
 app = FastAPI(title="Cybersecurity API")
@@ -25,7 +29,7 @@ app.add_middleware(
 # Directories
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(current_dir)
-frontend_dir = os.path.join(project_root, "frontend")
+frontend_dir = os.getenv("FRONTEND_PATH", os.path.join(project_root, "frontend"))
 model_dir = os.path.join(current_dir, "models")
 chatbot_dir = os.path.join(current_dir, "chatbot")
 
